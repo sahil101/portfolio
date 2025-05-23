@@ -30,28 +30,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      # Step 2: Set up Node.js environment
+      # Step 2: Read .nvmrc file and set up Node.js
+      - name: Read .nvmrc
+        id: nvm
+        run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+      
+      # Step 3: Set up Node.js environment using version from .nvmrc
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"  # Use Node.js version 20
+          node-version: ${{ steps.nvm.outputs.NVMRC }}  # Use version from .nvmrc
           cache: npm         # Cache npm dependencies for faster builds
       
-      # Step 3: Configure GitHub Pages
+      # Step 4: Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
-      # Step 4: Install project dependencies
+      # Step 5: Install project dependencies
       - name: Install dependencies
-        run: npm ci          # Clean install of dependencies (stricter than npm install)
+        run: npm install     # Install dependencies and update package-lock.json if needed
       
-      # Step 5: Build the Next.js application
+      # Step 6: Build the Next.js application
       - name: Build with Next.js
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /portfolio  # Set base path for routing
       
-      # Step 6: Upload the built files as an artifact
+      # Step 7: Upload the built files as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
