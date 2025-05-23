@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"  # Use Node.js version 20
+          node-version: "22"  # Use Node.js version 22
           cache: npm         # Cache npm dependencies for faster builds
       
       # Step 3: Configure GitHub Pages
