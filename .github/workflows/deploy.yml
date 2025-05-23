@@ -3,9 +3,9 @@ name: Deploy to GitHub Pages
 
 # Define when this workflow should run
 on:
-  # Triggers the workflow on push events to main branch
+  # Triggers the workflow on push events to master branch
   push:
-    branches: ["main"]
+    branches: ["master"]
   # Allows manual triggering of the workflow from GitHub UI
   workflow_dispatch:
 
@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"  # Use Node.js version 22
+          node-version: "20"  # Use Node.js version 20
           cache: npm         # Cache npm dependencies for faster builds
       
       # Step 3: Configure GitHub Pages
@@ -43,7 +43,7 @@ jobs:
         
       # Step 4: Install project dependencies
       - name: Install dependencies
-        run: npm install         # Clean install of dependencies (stricter than npm install)
+        run: npm ci          # Clean install of dependencies (stricter than npm install)
       
       # Step 5: Build the Next.js application
       - name: Build with Next.js
