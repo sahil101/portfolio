@@ -1,6 +1,12 @@
 # Modern Portfolio Website
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-blue)](https://sahil101.github.io/portfolio)
+
 A modern, responsive portfolio website built with Next.js 14, TypeScript, and Shadcn UI.
+
+## 🌐 Live Website
+
+Visit my portfolio: [sahil101.github.io/portfolio](https://sahil101.github.io/portfolio)
 
 ## Features
 
@@ -29,7 +35,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Sh
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/sahil101/portfolio.git
    ```
 
 2. Install dependencies:
@@ -93,6 +99,7 @@ MIT License - feel free to use this project as a template for your own portfolio
 
 ## Author
 
-Your Name
+Sahil Agarwal
+- Portfolio: [sahil101.github.io/portfolio](https://sahil101.github.io/portfolio)
 - GitHub: [@sahil101](https://github.com/sahil101)
 - LinkedIn: [Sahil Agarwal](https://www.linkedin.com/in/agarwalsahil97/)
