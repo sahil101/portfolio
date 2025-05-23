@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * Projects Page Component
  * 
@@ -24,7 +26,7 @@ export default function ProjectsPage() {
       description: "A modern portfolio website built with Next.js and Shadcn UI",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
       link: "/",
-      github: "https://github.com/yourusername/portfolio"
+      github: "https://github.com/sahil101/portfolio"
     },
     // Add more projects here
   ]

@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * Contact Page Component
  * 
@@ -18,17 +20,17 @@ export default function ContactPage() {
   const socialLinks: SocialLink[] = [
     {
       platform: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/sahil101",
       icon: "github"
     },
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/agarwalsahil97/",
       icon: "linkedin"
     },
     {
       platform: "Twitter",
-      url: "https://twitter.com/yourusername",
+      url: "https://twitter.com/sahilagarwal97",
       icon: "twitter"
     }
   ]
@@ -46,11 +48,11 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div className="flex flex-col space-y-2">
               <p className="text-lg">
-                Email: <a href="mailto:your.email@example.com" className="text-primary hover:underline">
-                  your.email@example.com
+                Email: <a href="mailto:sahil.agarwal@example.com" className="text-primary hover:underline">
+                  sahil.agarwal@example.com
                 </a>
               </p>
-              <p className="text-lg">Location: Your City, Country</p>
+              <p className="text-lg">Location: San Francisco Bay Area</p>
             </div>
             
             <div className="flex gap-4">

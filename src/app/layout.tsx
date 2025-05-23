@@ -7,8 +7,11 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Portfolio",
-  description: "A showcase of my work and skills",
+  title: "Sahil Agarwal | Portfolio",
+  description: "Full-stack developer specializing in modern web applications",
+  keywords: ["Next.js", "React", "TypeScript", "Web Development", "Portfolio"],
+  authors: [{ name: "Sahil Agarwal" }],
+  creator: "Sahil Agarwal",
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <header className="border-b">
           <div className="container mx-auto px-4 py-4">
@@ -35,7 +38,7 @@ export default function RootLayout({
                 <TabsList>
                   {navItems.map((item) => (
                     <Link key={item.path} href={item.path} passHref>
-                      <TabsTrigger value={item.path}>
+                      <TabsTrigger value={item.path} className="cursor-pointer">
                         {item.name}
                       </TabsTrigger>
                     </Link>
@@ -45,7 +48,14 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main>{children}</main>
+        <main className="min-h-screen bg-background">
+          {children}
+        </main>
+        <footer className="border-t py-4 mt-8">
+          <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Sahil Agarwal. All rights reserved.
+          </div>
+        </footer>
       </body>
     </html>
   );
